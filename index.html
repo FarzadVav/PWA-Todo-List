@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header>
+    <a class="btn btn-link" href="index.html">Home</a>
+    <a class="btn btn-link" href="new.html">New</a>
+    <a class="btn btn-link" href="archives.html">Archives</a>
+    <a class="btn btn-link" href="about.html">About me</a>
+  </header>
+
+  <ul class="container" id="todos-container"></ul>
+
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="db.js" type="module"></script>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
