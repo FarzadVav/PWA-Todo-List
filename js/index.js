@@ -1,4 +1,4 @@
-import db from "/db.js"
+import db from "./db"
 
 const todosContainer = document.getElementById("todos-container")
 
