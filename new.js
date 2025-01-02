@@ -1,5 +1,3 @@
-import db from "./db.js"
-
 const newTodoBtn = document.getElementById("new-todo-btn")
 const newTodoInput = document.getElementById("new-todo-input")
 const todosContainer = document.getElementById("todos-container")
