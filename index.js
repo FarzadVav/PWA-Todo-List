@@ -1,11 +1,11 @@
-import { db } from "./db"
+import { spb } from "./db"
 
 console.log("index.js")
 
 const todosContainer = document.getElementById("todos-container")
 
 async function loadTodos() {
-  const { data } = await db
+  const { data } = await spb
     .from("todos")
     .select()
     .eq("is_archive", false)
@@ -31,7 +31,7 @@ async function loadTodos() {
 }
 
 window.handleDeleteTodo = async (id) => {
-  const { error } = await db.from("todos").delete().eq("id", id)
+  const { error } = await spb.from("todos").delete().eq("id", id)
   if (error) {
     alert("Unknown error on supabase")
   } else {
@@ -40,7 +40,7 @@ window.handleDeleteTodo = async (id) => {
 }
 
 window.handleCompleteTodo = async (id, state) => {
-  const { error } = await db.from("todos").update({ is_complete: !state }).eq("id", id)
+  const { error } = await spb.from("todos").update({ is_complete: !state }).eq("id", id)
   if (error) {
     alert("Unknown error on supabase")
   } else {
@@ -49,7 +49,7 @@ window.handleCompleteTodo = async (id, state) => {
 }
 
 window.handleArchiveTodo = async (id) => {
-  const { error } = await db.from("todos").update({ is_archive: true }).eq("id", id)
+  const { error } = await spb.from("todos").update({ is_archive: true }).eq("id", id)
   if (error) {
     alert("Unknown error on supabase")
   } else {
