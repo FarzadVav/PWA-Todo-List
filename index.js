@@ -1,5 +1,7 @@
 import db from "./db"
 
+console.log("index.js")
+
 const todosContainer = document.getElementById("todos-container")
 
 async function loadTodos() {
