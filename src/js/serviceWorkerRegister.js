@@ -1,4 +1,4 @@
-export const registerServiceWorker = async () => {
+;(async () => {
   if ("serviceWorker" in navigator) {
     try {
       const registration = await navigator.serviceWorker.register("/sw.js", {
@@ -15,4 +15,4 @@ export const registerServiceWorker = async () => {
       console.error(`Registration failed with error: ${error}`)
     }
   }
-}
+})()
