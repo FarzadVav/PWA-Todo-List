@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Todo</title>
 
-  <link rel="stylesheet" href="index.css">
-  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="/src/styles/index.css">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <header>
     <a class="btn btn-link" href="index.html">Home</a>
-    <a class="btn btn-link" href="new.html">New</a>
-    <a class="btn btn-link" href="archives.html">Archives</a>
-    <a class="btn btn-link" href="about.html">About me</a>
+    <a class="btn btn-link" href="/src/pages/new.html">New</a>
+    <a class="btn btn-link" href="/src/pages/archives.html">Archives</a>
+    <a class="btn btn-link" href="/src/pages/about.html">About me</a>
   </header>
 
   <div style="max-width: 1024px;" class="container row">
@@ -26,8 +27,8 @@
   <h1 style="margin: 3rem 0 0 3rem;">Latest todos:</h1>
   <ul class="container" id="todos-container"></ul>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script type="module" src="new.js"></script>
+  <script src="/src/js/supabase.js"></script>
+  <script type="module" src="/src/js/new.js"></script>
 </body>
 
 </html>
